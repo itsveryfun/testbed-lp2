@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="testbed-scenario" content="cross_host_index">
+<title>Northwind Applications</title>
+<style>
+  body { margin: 0; font: 15px/1.6 -apple-system, "Helvetica Neue", Arial, sans-serif; color: #1c1c1e; }
+  header { padding: 18px 16px; background: #24405c; color: #fff; }
+  header h1 { margin: 0; font-size: 20px; }
+  main { padding: 0 16px 40px; }
+  p { color: #3c3c43; }
+</style>
+</head>
+<body>
+<!-- This host exists to be the far side of a cross-host journey, so its only real page is
+     done.html. Without this index the host root would answer 404, which reads as a broken
+     deployment rather than as "nothing is supposed to be here". -->
+<header><h1>Northwind Applications</h1></header>
+
+<main>
+  <p>Processing host. Applications arrive here from the main site; there is nothing to start
+     from this page.</p>
+  <p><a href="done.html" id="tb-lp2-done">Application confirmation</a></p>
+  <p><a href="https://lp.appicstar.com/index.html" id="tb-lp2-main">Northwind Lending</a></p>
+</main>
+</body>
+</html>
